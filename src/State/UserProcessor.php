@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\State;
 
 use ApiPlatform\Metadata\DeleteOperationInterface;
@@ -13,7 +15,8 @@ readonly class UserProcessor implements ProcessorInterface
         private ProcessorInterface $persistProcessor,
         private ProcessorInterface $removeProcessor,
         private UserPasswordHasherInterface $userPasswordEncoder
-    ) {}
+    ) {
+    }
 
     public function process(mixed $data, Operation $operation, array $uriVariables = [], array $context = [])
     {

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace App\DataFixtures;
 
@@ -10,7 +12,7 @@ class TrainingFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
-        for ($i = 1; $i < 5; $i++ ) {
+        for ($i = 1; $i < 5; $i++) {
             $training = new Training();
             $training
                 ->setYear("Year $i")
@@ -19,7 +21,6 @@ class TrainingFixtures extends Fixture
                 ->setDegree("Degree $i")
                 ;
             $manager->persist($training);
-
         }
 
         $manager->flush();
