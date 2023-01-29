@@ -2,13 +2,12 @@
 
 namespace App\Entity;
 
-use ApiPlatform\Metadata\ApiResource;
-use App\Repository\TrainingRepository;
-use Doctrine\ORM\Mapping as ORM;
 use ApiPlatform\Metadata;
+use ApiPlatform\Metadata\ApiResource;
+use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
-#[ORM\Entity(repositoryClass: TrainingRepository::class)]
+#[ORM\Entity]
 #[ApiResource(
     operations: [
         new Metadata\Get(),
